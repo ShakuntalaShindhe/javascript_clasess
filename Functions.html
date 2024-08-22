@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example of functions</h3>
+    <p>Functions in JS provides organized,Reusable code to perform a set of actions.
+        Functions simplify the coding process,prevent redundant logic,and make code easier to follow.
+    </p>
+    <P>Functions parameter is a variable listed in the parantheses of a function
+        declaration,and an agrumentis the actual value or expression passed to the function when it is called<br>
+        A function return statement is used to specify the value that a function should return when it is called
+    </P>
+</body>
+<script>
+    //Functions
+    function greet(){
+        console.log('Hello from function')
+    }
+    greet()
+
+//Parameters and argumets
+/*function greet(name){
+    console.log('Good morning'+''+name)
+}
+greet('Shakuntala')
+*/
+function greet(name,age,address){//parameteres
+    console.log('Hi'+'  '+name+'Age is'+''+age+''+'Address is:'+''+address)
+}
+greet('Shakuntala',21,'Bidar')//declaration
+
+
+//Function Return
+function greet(name){
+    return 'Good Morning'+' '+name
+}
+let a=greet('John')
+console.log('This is with a function return',a)
+
+//aithematic operations with function
+function operation(a,b){
+    return a+b;
+}
+let add=operation(3,4)
+console.log('Addition is',add)
+
+//Area of circle
+function circle(radius){
+    return 3.141*radius*radius
+}
+let area_of_circle=circle(2)
+console.log('area of circle is',area_of_circle)
+
+//Area of Rectangle
+function rect(l,b){
+    return l*b;
+}
+let area=rect(3,4)
+console.log('Area Of Rectangle is',area)
+
+//Even Number
+/*function even(number){
+    return number % 2==0 ;
+}
+let num=even(prompt('Enter a Number'))
+console.log('Even Number is',num)*/
+
+//2method
+/*function even(number){
+    if(number%2==0){
+        return 'even'
+    }else{
+        return 'odd'
+    }
+}
+console.log(even(prompt('Enter A number')))
+*/
+
+//Even Number Divisible by 2 and 3
+function even(number){
+    return number % 2==0 && number % 3==0;
+}
+let even_num=even(prompt('enter a number'))
+console.log('Number is divisible by both 2 and 3',even_num)
+
+
+//Positive ,Negative and zero number
+/*function number(num){
+    if(num>0){
+        return 'positive number'
+    }else if(num<0){
+        return 'Negative Number'
+    }else {
+        return 'Zero '
+    }
+}
+console.log(number(prompt('Enter A Number')))*/
+
+//Even Number in a Given Array
+function Evenarr(num){
+        for(let a=0;a<num.length;a++){
+            if(num[a]%2==0){
+          
+            }
+        }        
+}
+let num=[1,2,3,4,5,6,7,8]
+console.log(num)
+
+// function Even(arr) {
+//   for (let i=0;i<arr.length;i++){
+//     if(arr[i]%2==0){
+//       console.log(arr[i]); //print even number
+//     }  
+//   }
+// }
+// let arr = [13,23,12,45,22,48,66,100]
+
+Even(arr) 
+</script>
+</html>

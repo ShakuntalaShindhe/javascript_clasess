@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>There are 3 condition checking Oparators</h3>
+    <ol>
+        <li>If condition</li>
+        <li>If-else condition</li>
+        <li>Switch condition</li>
+    </ol>
+    <hr>
+    <h4>If condition</h4>
+    <p>The is statement is the most basic conditional statement.It ecaluates a condition and ,if the condition is true , it executes a block of code.</p>
+
+    <h4>Else Condition</h4>
+    <p></p>
+
+    <h4>Ternary Operators</h4>
+    <p>The ternary Operator is concise way to write an if-else statement in a single line</p>
+</body>
+<script>
+    //If condition
+    let x=10
+    if(x>6){
+        console.log('X is greater')
+    }
+
+    let str=''
+    if(str==''){
+        console.log('String is empty')
+    }
+    let y=20
+    if(y%2==0){
+        console.log('y is even')
+    }
+
+    //Else Condition
+
+    // let num=2
+    // let num=parseInt(prompt('enter a number'))
+    // if(num>4){
+    //     console.log('number is greater')
+    // }else{
+    //     console.log('number is lesser')
+    // }
+    
+
+    //checking number is +ve ,-ve ,zero
+    let number=6
+    if(number>0){
+        console.log('Number is +ve')
+    }else if(number<0){
+        console.log('number is -ve')
+    }else if(number==0){
+        console.log('number is equal')
+    }else{
+        console.log('invalid number')
+    }
+
+    //task
+     let value=99
+    if(typeof value=='number'){
+        console.log('you have entered a number')
+
+    }else if(typeof value=='string'){
+        console.log('you have entered a string')
+    }else{
+        console.log('invalid enter')
+    }
+
+    //check the grade of students
+    // let score=parseFloat(prompt('Enter you score'))
+    // let grade;
+    // if (score>=90){
+    //     grade='A'
+    //     console.log('Your grade is',grade)
+    // }else if(score>=80 && score<90){
+    //     grade='B'
+    //     console.log('Your grade is',grade)
+    // }else if(score>=70 && score<80){
+    //     grade='C'
+    //     console.log('Your grade is',grade)
+    // }else{
+    //     grade='fail'
+    //     console.log('your grade is',grade)
+    // }
+
+
+  //Checking types of triangle
+//   let a=2;
+//   let b=1;
+//   let c=2;
+//   let triangle;
+//   if(a===b && b===c && c===a){
+//     triangle='Equilateral'
+//     console.log('Equilateral Triangle')
+//   }else if(a===b || b===c || c===a){
+//     triangle='isosceles'
+//     console.log('Isosceles Triangle')
+//   }else{
+//     triangle='scalene'
+//     console.log('Scalene Triangle')
+//   }
+
+//   //Task:Checking user name password
+//   let username=prompt('enter your username')
+//   let password=prompt('enter your password')
+
+//   if(username=='shakuntala' && password=='1234'){
+//     console.log('Welcome'+username)
+//   } else if(username!=='shakuntala' && password!=='1234'){
+//     console.log('Incorrect username and password')
+   
+//   }else if(username=='shakuntala' || password!=='1234'){
+//     console.log('Incorrect password')
+//   }else{
+//     console.log('Inncorrect Username')
+//   }
+
+
+  //Ternary Operators
+  let p=12
+  let p_dis=(p>10)?'Your number is greater':'Your number is lesser'
+  console.log(p_dis)
+
+
+
+
+//Practice
+// let user=prompt('enter ur email')
+// let pass=prompt('enter ur password')
+// if(user=='Sheshikant'&& pass=='12345'){
+//     console.log('Welcome'+user)
+// }else if(user=='Sheshikant' || pass!=='12345'){
+//     console.log('Enter correct pass',user)
+// }else if(user!=='Sheshikant' || pass=='12345'){
+//     console.log('Enter correct email')
+// }
+
+//Switch statement
+
+// let day='Monday'
+// let day=prompt('Enter a day')
+// let msg;
+// switch(day) {
+//     case 'Monday'.toLowerCase():
+//         msg='First day of Week'
+//         break;
+//     case 'saturday' .toLowerCase():
+//         msg='weekend'
+//         break;
+//     case 'wednseday'.toLowerCase():
+//         msg='Third day of Week'
+//         break;
+//     default:
+//         msg='regular day of week' 
+// }
+// console.log(msg)
+
+//Multiple Switch Statements
+// let month='June'
+// let month=prompt('Enter a month') .toLowerCase
+// let season;
+// switch(month){
+//     case 'december':
+//     case 'January':
+//        season='Winter'
+//        break;
+//     case 'Febuaray':
+//     case 'March':
+//     case 'April':
+//         season='Summer'
+//         break;
+//     case 'June':
+//     case 'July':
+//     case 'August':
+//         season='Rainy'
+//         break;
+//     default:
+//         season='Invalid Month'
+    
+// }
+// console.log(season)
+
+//Task
+let score=prompt('Enter your Score...')
+
+// let score=90
+let grade;
+if(score>=90 && score<100){
+    grade='A+';
+}else if(score>=80 && score<90){
+    grade='A';
+}else if(score>=60 && score<80){
+    grade='B';
+}else if(score<60){
+    grade='Fail';
+}
+switch(grade){
+    case 'A+':
+        console.log('Your score is A+')
+        break;
+    case 'A':
+        console.log('Your score is A')
+        break;
+    case 'B':
+        console.log('Your score is B')
+        break;
+    case 'Fail':
+        console.log('Your score is Fail')
+        break;
+
+    default:
+        console.log('Invalid Input')
+}
+
+
+    </script>
+</html>
