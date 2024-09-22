@@ -14,6 +14,9 @@
         declaration,and an agrumentis the actual value or expression passed to the function when it is called<br>
         A function return statement is used to specify the value that a function should return when it is called
     </P>
+    <p>default parameters in function allows you to specify default values for
+        parameters in case the caller doesnt provide the value for them
+    </p>
 </body>
 <script>
     //Functions
@@ -22,14 +25,14 @@
     }
     greet()
 
-//Parameters and argumets
+//function with Parameters and argumets
 /*function greet(name){
-    console.log('Good morning'+''+name)
+    console.log('Good morning'+' '+name)
 }
 greet('Shakuntala')
 */
 function greet(name,age,address){//parameteres
-    console.log('Hi'+'  '+name+'Age is'+''+age+''+'Address is:'+''+address)
+    console.log('Hi'+'  '+name+'Age is'+' '+age+' '+'Address is:'+' '+address)
 }
 greet('Shakuntala',21,'Bidar')//declaration
 
@@ -81,11 +84,11 @@ console.log(even(prompt('Enter A number')))
 */
 
 //Even Number Divisible by 2 and 3
-function even(number){
+/*function even(number){
     return number % 2==0 && number % 3==0;
 }
 let even_num=even(prompt('enter a number'))
-console.log('Number is divisible by both 2 and 3',even_num)
+console.log('Number is divisible by both 2 and 3',even_num)*/
 
 
 //Positive ,Negative and zero number
@@ -101,25 +104,119 @@ console.log('Number is divisible by both 2 and 3',even_num)
 console.log(number(prompt('Enter A Number')))*/
 
 //Even Number in a Given Array
-function Evenarr(num){
+
+/*function Evenarr(num){
         for(let a=0;a<num.length;a++){
             if(num[a]%2==0){
-          
             }
         }        
 }
 let num=[1,2,3,4,5,6,7,8]
-console.log(num)
+console.log(num)*/
 
-// function Even(arr) {
-//   for (let i=0;i<arr.length;i++){
-//     if(arr[i]%2==0){
-//       console.log(arr[i]); //print even number
-//     }  
-//   }
-// }
-// let arr = [13,23,12,45,22,48,66,100]
+//Default Parameters:its give first perference to the user if user is not mentioned a values then it will take a default one
 
-Even(arr) 
+//1.
+/*function greet(name,age=21){
+    return 'Welcome'+' '+name+' '+age
+}
+let greet1=greet('john')
+console.log(greet1)
+let greet2=greet('harry',32)
+console.log(greet2)
+
+//2
+function addition(a,b,c=4){
+    return a+b+c
+}
+let add1=addition(1,2)
+console.log(add1)
+let add2=addition(2,5,6)
+console.log(add2)*/
+
+
+//1.Arrow function
+
+/*const multiplyByTwo=(num)=>{
+    return (num*2)
+}
+console.log(`Number is 2 Multiplied 2 then ans will be :${multiplyByTwo(2)}`)
+console.log(`Number is 4 Multiplied 2 then ans will be  :${multiplyByTwo(4)}`)
+console.log(`Number is 10 Multiplied 2 then ans will be  :${multiplyByTwo(10)}`)
+
+//2.
+const isEven=(number)=>{
+    return number%2==0
+}
+console.log('Given 6 isEven:',isEven(6))
+console.log('Given 3 isEven:',isEven(3))
+console.log('Given 15 isEven:',isEven(15))*/
+
+//2.Global and Local Scope
+//Global Variable
+var GlobalVar=10
+function global(){
+    console.log('global variable is:',GlobalVar)
+}
+global()
+
+//local variable
+//  let =scopeTest();
+ function scopeTest(){
+    localVar='hello'
+    //global Var
+    console.log('Global Var',GlobalVar)
+    //local var
+    console.log(`${localVar}`)
+ }
+ scopeTest()
+ console.log('Calling global variable outside',GlobalVar)
+
+
+ //3.Closures
+ /*function outerFunction(){
+    var outerVar=5
+    function innerFunction(){
+        return outerVar
+    }
+    return innerFunction()
+ }
+ let closure=outerFunction()
+ console.log(`${closure}`)
+
+ //4.pure Functions
+ //1.Sum
+ function sum(a,b){
+    return a+b
+ }
+ let result1=sum(10,2)
+ let result2=sum(10,2)
+ console.log(`result: ${result1} result:${result2}`)
+
+ //2.Multiply
+ function Multiply(x,y){
+    return x*y
+ }
+ let answer1=Multiply(2,4)
+ let answer2=Multiply(2,4)
+ console.log('Multiplication answer',answer1,answer2)
+
+ //Pure Function:in pure functions 'Given a same input it always return the same output'
+ //and has no side effects ,becouse we are returning them twice 
+
+
+ //5.Call Stack
+
+ function functionA(){
+    return functionB()
+ }
+ function functionB(){
+   return functionC()
+ }
+ function functionC(){
+    return 'In FunctionC'
+ }
+ functionA()*/
+
 </script>
 </html>

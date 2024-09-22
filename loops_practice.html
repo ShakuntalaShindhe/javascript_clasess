@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Loops practice</h4>
+</body>
+<script>
+    //1. problem
+    //write a program to print the marks of a student in an object using for loop
+    // obj={shakku 98,sheshi 70, radhika 89,sudheer 79}
+
+    let marks={
+        shakuntala:90,
+        radhika:92,
+        sudheer:78,
+        sheshi:69
+    }
+    // for(let i=0;i<Object.keys(marks).length;i++)
+    //or
+    for(let key in marks){
+        // console.log('keys:'+key)
+        // console.log('values:'+marks[key])
+        console.log('the marks of:'+' '+key+' '+marks[key])
+    }
+
+  //2.write a program to print 'try again' untill the user enters the correct number
+   /* let correct_number=4
+    let i;
+    while(i != correct_number){
+        console.log('Try again')
+        i=prompt('enter a number')
+    }
+    console.log('You have entered a correct number')*/
+
+    //3.write a program to find mean of 5 numbers
+    function mean(a,b,c,d,e){
+        return (a+b+c+d+e)/2
+    }
+     let answer=mean(2,2,3,4,6)
+     console.log(answer)
+
+     //4.js problem to print number form 1 to 10 
+     function num(){
+        for(let i=1;i<=10;i++){
+            console.log(i)
+        }
+     }num()
+    console.log('==============')
+     //5. Write a JS code to print Even numbers in given array
+
+     function even(arr){
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]%2==0){
+                console.log(' even arrays are',arr[i]);
+            }
+        }
+     }
+    //  let arr=[13,23,12,45,22,48,88,100]
+    //  even(arr)
+      let a=even([13,23,12,45,22,48,88,100])
+
+    //6. Write a JS code to find the power of a number using for loop
+     function power(number,pow){
+        let result=1
+        for(let i=0;i<pow;i++){
+            result=result*number
+        }
+        return result;
+     }
+     let b=power(2,3)
+     console.log('the Result is',bs)
+</script>
+</html>

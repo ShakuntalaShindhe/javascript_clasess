@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .demo{
+        font-size: 17px;
+        color: red;
+    }
+</style>
+<body>
+    <!--query selector-->
+    <h2 id="main">Heading</h2>
+    <p class="para">Paragraph1</p>
+    <p class="para">Paragraph2</p>
+    <a href="#">Link</a>
+
+    <!--query selector all-->
+    <div class="box">Box1</div>
+    <div class="box">Box2</div>
+    <div class="box">Box3</div>
+    <div class="box">Box4</div>
+
+    <ul id="fruit_list">
+        <li>Apple</li>
+        <li>banana</li>
+        <li>Oranges</li>
+    </ul>
+    <p class="demo">Para</p>
+    <h1 class="demo">Heading1</h1>
+    <h6 class="demo">Heading6</h6>
+
+    <!--Class task-->
+    <p id="example">Paragraph Text</p>
+    <p>Paragraph</p>
+    <button id="myButton" onclick="buttonclick()">click here</button>
+    <p id="color" style="background-color: red;">Color Change</p>
+    <button onclick="changeColor()">Click Me</button>
+
+    <p id="text">Paragraph</p>
+    <button onclick="changeText">Click here</button>
+</body>
+<script>
+    const Heading=document.querySelector('#main')
+    console.log(Heading.textContent)
+
+    const para=document.querySelector('.para')
+    console.log(para.textContent)
+
+    const a=document.querySelector('a')
+    console.log(a.textContent)
+
+    //query selector all
+    const boxes=document.querySelectorAll('.box')
+    boxes.forEach(box=>console.log(box.textContent))
+
+    const item=document.querySelector('#fruit_list')
+    item.forEach(fruits=>console.log(fruits.textContent))
+
+   const demos=document.querySelectorAll('.demo')
+   demos.forEach(item=>console.log(item.textContent))
+
+//Class Task
+//1.Write a Javascript code to change the text content of an HTML element with the
+//id 'example' to 'Hello,DOM'
+  
+ document.getElementById('example').textContent='Hello,DOM';
+
+ //2.Write Javascript code of clicking a button with the id 'myButton' and log the message
+ //'Button clicked!' to the console
+ function buttonclick(){
+    console.log('Button Clicked!')
+ }
+
+//3.Toggle the background color of a paragraph with the id 'myParagraph' between red and blue
+ function changeColor(){
+    const ele=document.getElementById('color')
+     ele.style.backgroundColor=(ele.style.backgroundColor=='red')?'blue':'red';
+ }
+ function changeText(){
+    const element=document.getElementById('text')
+    //  (element.innerHTML='Paragraph') ?'Good morning':'Good Evening'
+    
+ }
+</script>
+</html>

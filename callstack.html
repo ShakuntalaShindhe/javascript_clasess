@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Javascript uses a call Stack to track the function in a program.
+        The call stack works on the last in first out(LIFO)principle.This means that the 
+        most recently called function will be the first to be completed.Whenver a function
+        is called.a new frame is added to the top of the stack
+       </p>
+</body>
+<script>
+    //Callstack
+    function first(){
+            return 'first'
+         }
+         function second(){
+            return first()+'second'
+         }
+        second()
+        while(true){
+let num1 = parseFloat(prompt("Enter the first number:"));
+console.log('first number:',num1)
+let num2 = parseFloat(prompt("Enter the second number:"));
+console.log('second number:',num2)
+let operation = prompt("Enter the operator (+, -, *, /):");
+console.log('operator:',operation)
+let result = performOperation(num1, num2, operation);
+console.log(`Result:${num1} ${operation} ${num2} = ${result}`);
+
+calculationHistory.push(`${num1} ${operation} ${num2} = ${result}`);
+
+let ContinueCal= prompt("Do you want to perform another calculation?(yes/no):");
+    if (ContinueCal !== 'yes') {
+        console.log("user decided to exit.");
+        displayHistory();
+        break;
+    }
+
+}
+
+       // Function to perform the calculation based on the operation
+/*function calculate(operation, num1, num2) {
+  let result;
+  switch (operation) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    case '/':
+      if (num2 === 0) {
+        console.log("Error: Division by zero is not allowed.");
+        return;
+      }
+      result = num1 / num2;
+      break;
+    default:
+      console.log("Error: Invalid operation.");
+      return;
+  }
+  console.log(`${num1} ${operation} ${num2} = ${result}`);
+}
+// Simulated input using prompt (replace with actual prompt in a supportive environment)
+let operation = prompt("Enter operator: "); // '+' for addition
+let num1 = parseFloat(prompt("Enter first number: ")); // e.g., 4
+let num2 = parseFloat(prompt("Enter second number: ")); // e.g., 5
+// Perform the calculation
+calculate(operation, num1, num2);*/
+</script>
+</html>

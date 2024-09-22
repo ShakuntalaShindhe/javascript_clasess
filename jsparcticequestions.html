@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>JS practice questions</h3>
+</body>
+<script>
+    //question 1
+/*const array = [10, 20, 30, 40];
+const result = array.map((num) => num / 2).filter((num) => num >= 15);
+console.log(result);*/
+
+//2.Find the issue in the below code snippet.
+//ans:its going to show the reference error on the sreeen i is not defined
+//when we are declaring i with the 'var' its is a function scope or global scope not a block scope
+//this means i is accessible outside the for loop
+/*let counter = 0;
+for (var i = 1; i <= 10; i++) {
+  counter+= i;
+}
+console.log(counter);
+console.log(i);*/
+
+//Analyze the below code. Do you see any issue? If yes, what is that issue?
+const object1 = {
+  a: 10,
+  b: 20,
+  c: function () {
+	console.log(this.a + this.b);
+  },
+};
+const func = object1.c;
+func();
+//Context of this: When you assign object1.c to func, func is no longer called as a method of object1. Instead, 
+//it is called as a standalone function
+//result:this.a and this.b are undefined in the global context, leading to NaN (Not-a-Number) when you try to
+// add them.
+const object={
+    a:10,
+    b:20,
+    c:function(){
+        console.log(this.a+this.b);
+    },
+};
+const fun=object.c.call(object)
+// fun();
+
+//Create a JavaScript function that calculates the tip for a given bill amount and tip percentage. Bill amount 
+//and tip percentage will be input parameters while output will be calculated tip value.
+function calculateTip(tipercentage,billamt){
+  let tip=billamt*(tipercentage/100);
+  return tip
+}
+let billamt=100;
+let tipercentage=103;
+const tip =calculateTip(tipercentage,billamt)
+console.log(`The tip is: ${tip}`);
+
+//What will be the output of below code snippet:
+
+function greetHello(name) {
+  return `Hello, ${name}!`;
+}
+console.log(greetHello("Brian"));//Hello,Brian!
+
+// Will the below code return any error? If yes, identify the error.
+
+function fetchData(callback) {
+  fetch('https://api.example.com/data')
+	.then(response => response.json())
+	.then(data => callback(null, data))
+	.catch(error => callback(error));
+}
+ fetchData(function (error, data) {
+  if (error) {
+	console.log('Error:', error);
+  } else {
+	console.log('Data:', data);
+  }
+});
+
+//Implement a simple shopping cart system with features to add items, remove items and calculate the total price. 
+//Use objects to represent items, including properties for the item name, price and quantity. Implement features to 
+//add items to the cart, remove items and calculate the total cost
+
+</script>
+</html>

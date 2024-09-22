@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    ul{
+       list-style: none; 
+    }
+    li{
+        background-color: rgb(134, 193, 193);
+        padding: 10px;
+        margin: 10px;
+    }
+</style>
+<body>
+    <h3>Example of Event bubling,capturing and delegation</h3>
+    <p>Event Bubling:In the event bubbling phase,the event starts from the target element that triggered the event
+        and bubbles up through its ancestor in the DOM hierarchy. Most modern browser follow the event bubbling model by default
+    </p>
+    <div id="outer">
+        <p id="inner">This is a paragraph</p>
+    </div>
+
+    <p>Capturing:In the event capturing phase,the event starts from the top-level ancestor and trickles
+        down to the target element that triggered the event.You can enable event capturing by setting the third
+        parameter of addEventListener to true
+    </p>
+    <div id="outer1">
+        <p id="inner1">paragraph</p>
+    </div>
+
+    <p>Event delegation:Event delegation is a technique in javascript where a single event listener is placed
+        on a common ancestor (usually a parent) of multiple elements,and it leverages event bubbling  to
+        handle events for all the child elements
+    </p>
+    <ul class="parentEle">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+    </ul>
+</body>
+<script>
+    document.getElementById('outer').addEventListener('click',()=>{
+        alert('this is outer func')
+    })
+    document.getElementById('inner').addEventListener('click',()=>{
+        alert('this is inner func')
+    })
+
+    //event capturing:
+    document.getElementById('outer1').addEventListener('click',()=>{
+        alert('outer function')
+    },true)
+    document.getElementById('inner1').addEventListener('click',()=>{
+        alert('inner function')
+    },true)
+
+    //event delegation
+    document.querySelector('.parentEle').addEventListener('click',(event)=>{
+        if(event.target.tagName==='LI'){
+            alert('you clicked on:'+event.target.textContent)
+        }
+    })
+</script>
+</html>

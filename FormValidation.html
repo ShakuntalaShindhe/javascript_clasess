@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .error{
+        color: red;
+    }
+</style>
+<body>
+    <h4>Registration Form</h4>
+    <form onsubmit="return onSubmit()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="enter your name..">
+        <span id="nameError" class="error"></span><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="enter your email.."/>
+        <span id="emailError" class="error"></span><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span id="passwordError" class="error"></span><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<script>
+    function onSubmit(){
+        var name=document.getElementById('name').value;
+        var email=document.getElementById('email').value;
+        var password=document.getElementById('password').value;
+        var nameError=document.getElementById('nameError');
+        var emailError=document.getElementById('emailError')
+        var passwordError=document.getElementById('passwordError')
+        var isValidate=true;
+    
+    function emailValidate(email){
+        var result=/\S+@\S+\.\S+/
+        return result.test(email)
+    }
+    function capitalLetter(password){
+        var result=/[A-Z]/
+       return result.test(result)
+    }
+    function specialChar(password){
+        var result=/[@!#+$&]/
+       return result.test(result)
+    }
+    if(name==''){
+        nameError.textContent='Enter the name';
+        isValidate=false;
+    }else{
+        nameError.textContent='';
+    }
+   
+    if(password==''){
+        passwordError.textContent='Invalid Password'
+        isValidate=false;
+    }else if(password.length<8){
+        passwordError.textContent='your password length should be greater than 8 characters';
+        isValidate=false
+    }else if(!capitalLetter(password)){
+        passwordError.textContent='Password should contain aleast one capital letter';
+        isValidate=false
+    }else if(!specialChar(password)){
+        passwordError.textContent='Your password must contain atleast one special character.';
+        isValidate=false
+    }else{
+        passwordError.textContent=''
+    }
+    if(email==''){
+        emailError.textContent='invalid Email'
+    }else if(!emailValidate(email)){
+        emailError.textContent='The email should contain @ and . in it';
+        isValidate=false
+    }else{
+        emailError.textContent='';
+    }
+  return isValidate;
+}
+</script>
+</html>

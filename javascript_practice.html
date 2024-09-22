@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h5>Javascript some Practice Questions</h5>
+</body>
+<script>
+//1.Given a string,reverse each word in the sentence
+     let str='Welcome to Javascript Practice';
+     let reverse_str=str.split('').reverse().join('')
+     console.log(reverse_str)//ecitcarP tpircsavaJ ot emocleW
+         
+     let reverse_str1=str.split('').reverse().join('')
+     console.log(reverse_str1)
+    /*let reverseEntireSentence=reverseBySeparator(str,'');
+    console.log(reverseEntireSentence)
+    let reverseEachWord=reverseBySeparator(reverseEntireSentence,' ');
+    function reverseBySeparator(str,separator){
+        return str.split(separator).reverse().join(separator);
+    }
+    let result= reverseBySeparator(str,' ')
+    console.log(result)*/
+
+    //2.how to check if an object ia an array or not?Provide some code
+    let arrList=[1,2,3]
+    let some= Array.isArray(arrList)
+    console.log(some)
+
+    if(Array.isArray(arrList)){
+        console.log('arrList ia an arrays')
+    }
+    function checkArray(){
+        let arrList=[1,2,3];
+        let check=Array.isArray(arrList);
+        console.log(check)
+    }
+    checkArray()
+
+//3.How to empty array in a javascript how could we empty
+//the array let arrayList=['a','b','c','d','e','f']
+    let arrayList=['a','b','c','d','e','f']
+    // let list=arrayList;
+    // let empty=arrayList.splice(0,arrayList.length)
+    // console.log(list)
+    
+     let anotherlist=arrayList;
+     arrayList.length=0;
+     console.log(anotherlist)
+
+//4.how would u check if a number is an integer?
+    function isInt(num){
+        return num%1===0;  //if number is divided by 1 and a remainder is zero that are true;
+    }
+    console.log(isInt(4))//true
+    console.log(isInt(12.2))//false
+
+//5.Make this work  duplicate([1,2,3,4,5])
+   function duplicate(arr){
+    return arr+arr//arr.concat(arr)
+   }
+   let re= duplicate([1,2,3,4,5,''])
+   console.log(re)
+
+   //write a js program that removes all the duplicates from an array
+   function duplicatearr(arr){
+     if(arr==arr){
+        return arr
+     }
+   }
+let arr = ["apple", "mango", "apple", "orange", "mango"];
+let uniqueArr = [...new Set(arr)];
+console.log(uniqueArr);
+
+//Write a function that would allow you to do this var addSix=createBase(6)
+//addSix(10) //return 16
+//addSix(21) //return 27
+  function createBase(baseNumber){
+    return function(N) {
+    return baseNumber+N;
+    }
+  }
+  let addSix=createBase(6)
+  console.log(addSix(10)) 
+  console.log(addSix(21))
+
+//FizzBuzz Challenge
+//Problem:Create a for loop that iterates up to 100 while outputting 'Fizz' at
+//multiples of 3,'buzz' at multiples of 5 and 'fizzbuzz' at multiples of 3 and 5
+
+/*for (var i = 1; i <=100; i++) {
+    if (i % 15 == 0) console.log("FizzBuzz");
+    else if (i % 3 == 0) console.log("Fizz");
+    else if (i % 5 == 0) console.log("Buzz");
+    else console.log(i);
+}*/
+
+//Implement wnqueue and dequeue using only two stacks
+//enqueue means add an element and dequeue means remove an element
+// let stack1=[] ;
+// let stack2=[] ;
+// function enqueue(input,item){
+//     return input.push(item)
+// }
+// function dequeue(input,output){
+//     if(output.length<=0){
+
+//     }
+// }
+
+//Given two strings,return true if they are anagrams of one another
+function anagrams(first,second){
+    let sort_1=first.toLowerCase().split('').sort().join('')
+    let sort_2=second.toLowerCase().split('').sort().join('')
+    return sort_1===sort_2;
+}
+console.log(anagrams('Army','mary'))
+
+//What will be the output of the following code
+//var y=1;
+//if(function f(){}){
+//y+=typeof f;
+//}
+//cosole.log(y)
+var y=1;
+if(function f(){}){
+y+=typeof f;
+}
+console.log(y)
+
+//what will be the following code output
+//(function(){
+//var a=b=5;
+//})();
+//console.log(b)
+// (function(){
+// var a=b=5;
+// })();
+// console.log(b)
+
+//write thr function that allows you to do this
+//multiply(5)(6);
+function multiply(a){
+    return function(b){
+        return a*b;
+    }
+}
+console.log( multiply(5)(6));
+
+</script>
+</html>

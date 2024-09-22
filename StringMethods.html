@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Example of String Methods</h4>
+</body>
+<script>
+
+    //String Methods
+    //Concat:You can concatenate strings using the + Operator or the concat method
+       let str1='Hello';
+       let str2='Hello';
+       let result=str1+' '+str2
+       console.log('Result:',result) 
+       let result2=str1.concat(' '+str2)
+       console.log('result:',result2)
+
+    //length:The Length property gives the lengthn of the string
+       let str_len='Hiiii';
+       console.log('String Length:',str_len.length)
+
+    //Accessing Characters:Individual characters can be accessed using square brackets and
+    // zero-based indexing
+        let char='Hello World';
+        console.log('Accessing o:',char[4])
+        console.log('Accessing l:',char[2])
+        console.log('Accessing D:',char[10])
+
+    //charAt
+        console.log('accessing o:',char.charAt(0))
+        console.log('accessing w:',char.charAt(6))
+        console.log('accessing space:',char.charAt(5))
+        
+    //Substring
+       let string_subString='Hii Everyone';
+       console.log('Substring :',string_subString.substring(0,2))
+       console.log('Substring hii :',string_subString.substring(0,4))
+       console.log('Substring  every:',string_subString.substring(4,9))
+
+       let str3='Good Morning';
+       console.log('substring :',str3.substring(0,4))
+       console.log('substring :',str3.substring(5,13))
+
+    //indexOf:The indexOf method searches for a substring and returns the index of the 
+    //first occurance
+       let str_index='Hello World'
+       console.log('Searching o:',str_index.indexOf('o'))
+       console.log('Searching l:',str_index.indexOf('l'))
+
+    //replace:the replace method replaces the specified substring with another
+       let str_replace='Hello World';
+       console.log('Replace a World :',str_replace.replace('World','Universe'))
+
+    //changing a case:the toUpperCase and toLowerCase methods change the case of the string
+    let str_upper='hello world'
+    console.log('Upper case :',str_upper.toUpperCase())
+
+    let str_lower='HELLO WORLD';
+    console.log('Lower Case :',str_lower.toLowerCase())
+
+//trim:the trim method remove the leading and trailing whitespace from string.
+     let str_trim= "    hello    ";
+     console.log('removing white space:',str_trim.trim())
+
+//string conversion
+    let num=29
+    console.log('Converting num to str:',num.toString())
+
+//Slicing:this is simialr to substring and it extracts the portion of string
+    let str_slice="Hello World"
+    console.log('Extracting ell:',str_slice.slice(1,4))
+    console.log('Extracting:',str_slice.slice(1))
+    console.log('Extracting world:',str_slice.slice(6))
+
+    //negative indexing:extract in backword
+     console.log('extracting world:',str_slice.slice(-5))
+     console.log('extracting world:',str_slice.slice(-11,-8))
+</script>
+</html>

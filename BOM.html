@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Example of BOM</h4>
+    <button onclick="showAlert()">alert Example</button>
+    <button onclick="showConfirm()">confirm example</button>
+    <button onclick="showPrompt()">prompt</button>
+    <button onclick="showWindow()">open/close</button>
+    <button onclick="showback()">Back</button>
+    <button onclick="showForward()">Forward</button>
+    <button onclick="showLocation()">Location</button>
+    <p id="output"></p>
+</body>
+<script>
+    function showAlert(){
+        alert('example of alert')
+    }
+
+    function showConfirm(){
+        const user_confirm=confirm('do you want to proceed?')
+        if(user_confirm){
+            const para=document.getElementById('output')
+            para.textContent='You have selected OK'
+        }else{
+            const para=document.getElementById('output')
+            para.textContent='you selected cancel'
+        }
+    }
+
+    function showPrompt(){
+        const user_input=prompt('Enter ur name')
+        if(user_input){
+             const para=document.getElementById('output')
+            para.textContent=`Hello ${user_input} Welcome to home page`
+        }else{
+            const para=document.getElementById('output')
+            para.textContent='no name found' 
+        }
+    }
+    // window.close()
+    function showWindow(){
+        window.open('https://www.google.com/')
+        
+    }
+
+    function showback(){
+        window.history.back()
+    }
+    function showForward(){
+        history.forward()
+    }
+
+    function showLocation(){
+        const Location=`href: ${window.location.href}
+                        hostname: ${window.location.hostname}`
+        const para=document.getElementById('output')
+        para.textContent=Location
+    }
+</script>
+</html>

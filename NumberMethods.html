@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Example of Number Methods</h4>
+</body>
+<script>
+
+//ToFixed:Converts a number into a string,rounding the number to specified number
+// of decimal
+       let fixed=5.6789
+       console.log('to fixed',fixed.toFixed(2))
+       let fix=4.123
+       console.log('to fix',fix.toFixed(1))
+       
+//To Precision:Formats a number to a specified length
+       let num=123.456
+       console.log(num.toPrecision(2))
+
+//To String:Converts a Number to String
+       let number=123
+       let str=number.toString()
+       console.log(str,typeof(str))
+
+//parseInt:Parses a string and returns an integer.
+        let str1='2';
+        console.log(parseInt(str1))
+
+//parseFloat:parses the string and returns the floating point number
+        let str2='10.3'
+        console.log(parseFloat(str2))
+
+//isNaN:Checks whether a value is NAN(Not a Number).if it is a number then it will print
+//false on the screen otherwise print true
+        let num1=NaN;
+        console.log(isNaN(num1))
+
+//isFinite():Checks whether a value is finite,it will return true for +ve ,-ve and
+//decimal values and returns false for NaN and infinity values
+      let num2=0.10;
+      console.log(isFinite(num2))
+
+      let num3=-10;
+      console.log(isFinite(num2))
+
+      let num4=10/0
+      console.log(isFinite(num4))
+
+//Number.isInteger():checks whether a value is an Integer if a value is integer means
+//from +ve to -ve it will print true for floating or decimal values it will print false
+        console.log(Number.isInteger(0.8))//false
+        console.log(Number.isInteger(-10))//true
+    
+
+
+</script>
+</html>

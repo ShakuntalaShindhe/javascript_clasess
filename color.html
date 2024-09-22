@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <title></title>
+    <title>Document</title>
+    <style>
+       
+        #Box {
+            width: 200px;
+            height: 40px;
+            border: 1px solid #000;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <p id="Box"></p><br>
+    <input type="text" id="Input" placeholder="Enter a color name...">
+</body>
+    <script>
+        const inputBox = document.getElementById('Input');
+        const colorBox = document.getElementById('Box');
+
+        inputBox.addEventListener('input', () => {
+            colorBox.style.backgroundColor = inputBox.value;
+        });
+    </script>
+
+</html>

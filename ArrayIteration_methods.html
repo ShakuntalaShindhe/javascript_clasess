@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Example of array Iteration methods</h4>
+</body>
+<script>
+//1.Map:Map is a collection of key/value pairs that can use any type of data as a key
+//or value and remember the order of its entries.It is used to iterate over all the
+//elements in an array,which results in a new array
+   
+   /*let arr=[1,2,3,4,5,6]
+   let result=arr.map(num=>num*3)
+   console.log(result)
+
+   let fruits=['apple','banana','Mango']
+   let result_fruits=fruits.map(fruit=>fruit.toUpperCase())
+   console.log(result_fruits)
+
+   let students=[{id:101,name:'john',grade:'A'},{id:102,name:'sam',grade:'A+'},{id:103,name:'harry',grade:'B'}]
+   let result_student=students.map(stu=>({grade:stu.grade,name:stu.name}))
+   console.log(result_student)
+
+   const days=['Mon','Tue','wed','Thu','Fri']
+   let day_res=days.map(day=>day*day)
+   console.log(day_res)
+
+   //example
+   let circles=[{radius:1},{radius:2},{radius:3}]
+   let circle_area=circles.map(area=>Math.PI*Math.pow(area.radius,2))
+   console.log(circle_area)
+
+   //Example
+   let numbers=[54,23,90,0,45]
+   let sort_asc=numbers.sort((a,b)=>a-b)
+   let result1=sort_asc.map(num=>num)
+   console.log(result1)
+
+   let num_reverse=numbers.reverse()
+   console.log(num_reverse)*/
+
+
+   //forEach:forEach method in javascript iterate over each element of an array without creating a new array
+
+    let number=[1,2,3,4]
+    number.forEach(num=>{
+        console.log(num)
+    })
+    number.forEach(numdoule=>{
+        console.log(numdoule*2)
+    })
+    
+    let fruitss=['apple','banana','mango']
+   fruitss.forEach(fru=>{
+    fru.toUpperCase()
+    console.log(fru)
+   })
+  
+   // push a number and double it with the help of for each method
+   let square=[]
+   let num=[1,2,3,4]
+   num.forEach(sqa=>{
+       square.push(sqa*2)
+   })
+   console.log(square)
+
+   //Filter:the filter method in javascript is used to create a new array containing
+   //elements that pass a certain condition.It takes a callback function as an arguments
+   //and applies that function to each element in the array.The Resulting array only
+   //includes elements for which the callback function returns true
+        /*let numbers=[1,2,3,4,5,6,7,8,9,10]
+        let result=numbers.filter(num=>num%2==0)
+         console.log(result)
+
+        let fruits=['apple','banana','mango','kiwi','pineapple']
+        let result_fruits=fruits.filter(fruit=>fruit.length<=5)
+        console.log(result_fruits)
+
+        let arr=[1,2,null,3,4,undefined,8]
+        let arr_res=arr.filter(value=>value!==null && value!==undefined)
+        console.log('result',arr_res) 
+
+        let products=[{id:101,name:'Laptop',price:800},{id:102,name:'Mobile',price:500},{id:103,name:'Tab',price:700}]
+        let product_res=products.filter(product=>product.price>500)
+        console.log(product_res)*/
+
+//Find:The find method in javascript is used to return the first element in an array
+//that satisfies a given testing function.It stops execution once such an element is found
+//,and it does not iterate over the entire array.The find method is particularly useful 
+//when you want to locate a specific element in an array based on a condition.
+
+       /* let numbers=[1,2,3,4,5,6,7,8,9,10]
+        let result=numbers.find(num=>num%2==0)
+        console.log(result)
+
+        let fruits=['apple','banana','mango','kiwi','pineapple']
+        let result_fruits=fruits.find(fruit=>fruit.length<5)
+        console.log(result_fruits)
+
+        let products=[{id:101,name:'Laptop',price:800},{id:102,name:'Mobile',price:500},{id:103,name:'Tab',price:700}]
+        let product_res=products.find(product=>product.price>500)
+        console.log(product_res)*/
+
+//Some:the some method is used to check if at least one element in an array satifies a given
+//condition.It returns true if any element passes the test;Otherwise,it returns false.
+
+       /* let numbers=[1,2,3,4,5,6,7,8,9,10]
+        let result=numbers.some(num=>num%2==0)
+        console.log(result)
+
+        let fruits=['apple','banana','mango','kiwi','pineapple']
+        let result_fruits=fruits.some(fruit=>fruit.length<4)
+        console.log(result_fruits)
+
+        let products=[{id:101,name:'Laptop',price:800},{id:102,name:'Mobile',price:500},{id:103,name:'Tab',price:700}]
+        let product_res=products.some(product=>product.price>500)
+        console.log(product_res)
+
+        let num1=[23,40,50,12]
+        let res=num1.some(num=>num<10)
+        console.log(res)*/
+
+//Reduce:The method in javascript is used to reduce the element of an array to a single 
+//value.It takes a callback function and an initial value.
+       let arr=[1,2,3,4]
+       let arr_res=arr.reduce((acc,curr)=>acc+curr,0)
+       console.log(arr_res)
+       
+</script>
+</html>

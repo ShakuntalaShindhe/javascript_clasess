@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="onClick()">click me</button>
+    <button onclick="onClick1()">click me</button>
+    <button onclick="onClick2()">click me</button>
+
+    <h4>Bookmarks</h4>
+    <button id="google">Google</button>
+    <button id="fb">Facebook</button>
+    <button id="twitter">Twitter</button>
+    
+</body>
+<script>
+    //write a program to show different alerts when defferent buttons are clicked
+    function onClick(){
+        alert('first button is clicked')
+    }
+    function onClick1(){
+        alert('second button is clicked')
+    }
+    function onClick2(){
+        alert('third button is clicked')
+    }
+
+    //create a website which is capable of storing bookmarks of your favorite website using href
+    document.getElementById('google').addEventListener('click',()=>{
+                window.location="https://google.com"
+    })
+    
+</script>
+</html>

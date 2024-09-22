@@ -28,11 +28,12 @@
     if(x>6){
         console.log('X is greater')
     }
-
+    //
     let str=''
     if(str==''){
         console.log('String is empty')
     }
+    //
     let y=20
     if(y%2==0){
         console.log('y is even')
@@ -40,14 +41,14 @@
 
     //Else Condition
 
-    // let num=2
-    // let num=parseInt(prompt('enter a number'))
-    // if(num>4){
-    //     console.log('number is greater')
-    // }else{
-    //     console.log('number is lesser')
-    // }
-    
+    /*let num=2
+    let num=parseInt(prompt('enter a number'))
+    if(num>4){
+        console.log('number is greater')
+    }else{
+        console.log('number is lesser')
+    }
+    */
 
     //checking number is +ve ,-ve ,zero
     let number=6
@@ -186,11 +187,9 @@
 // }
 // console.log(season)
 
-//Task
-let score=prompt('Enter your Score...')
 
 // let score=90
-let grade;
+/*let grade;
 if(score>=90 && score<100){
     grade='A+';
 }else if(score>=80 && score<90){
@@ -216,7 +215,63 @@ switch(grade){
 
     default:
         console.log('Invalid Input')
+}*/
+
+//Switch with Functions
+function monday(){
+    return "First day of week"
 }
+function wednseday(){
+    return "Third day of week"
+}
+function friday(){
+    return "Fifth day of week"
+}
+function daysofweek(day){
+    switch(day){
+        case 'Mon':
+            return monday();
+            break;
+        case 'Wed':
+            return wednseday();
+            break;
+        case 'Fri':
+            return friday();
+            break;
+        default:
+            'Normal day of week'
+    }
+}
+console.log(daysofweek('Mon'))
+
+//Checking the Grade of Students
+function grade(){
+    return 'Your score is A+'
+}
+function grade1(){
+    return 'YOur score is A'
+}
+function grade2(){
+    return 'Your score is B'
+}
+function Student(marks){
+    switch(true){
+        case marks>90 && marks<=100:
+            return grade();
+            break;
+        case marks>80 && marks<90:
+            return grade1();
+            break;
+        case marks>=60 && marks<80:
+            return grade2();
+            break;
+        
+        default:
+            return 'You fail'
+    }
+}
+console.log(Student(59))
+
 
 
     </script>

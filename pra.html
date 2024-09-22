@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+let a=21;
+if(a>20){
+    console.log(`${a} is gretare than 20`)
+}
+
+let b=20;
+if(b>10){
+    console.log( 'b is greter tha 10');
+}else{
+    console.log( 'b is smaller than 10');
+}
+ function even(num){
+ if(num%2!==0){
+    console.log('number is odd')
+ }else{
+    console.log('number is even')
+ }}
+ even(11)
+
+ function checkNum(num){
+    if(isNaN(num)){
+        console.log('its not a number')
+    }else{
+        console.log('its a number')
+    }
+ }
+ checkNum('avc')
+
+ function lagestofnum(num1,num2){
+    if(num1>num2){
+        console.log(num1,'is the larger than',num2)
+    }else if(num2>num1){
+        console.log(num2,'is larger than',num1)
+    }else{
+        console.log(num1,'and ',num2 ,'are equal')
+    }
+ }
+ lagestofnum(12,14)
+ lagestofnum(14,14)
+
+ function typeoftri(side1,side2,side3){
+    if(side1==side2 && side2==side3){
+        console.log('equilateral triangle')
+    }else if(side1==side2 || side2==side3 ||side3==side1 ){
+        console.log('scalene triangle')
+    }else{
+        console.log('isosces triangle')
+    }
+ }
+ typeoftri(12,11,10)
+
+ //leap year
+ function leapyear(year){
+    if((year%4==0 && year%100!==0 )||(year%400===0)){
+        console.log('this is the leap year')
+    }else{
+        console.log('this is not a leap year')
+    }
+ }
+ leapyear(2028)
+
+   /*let marks=70;
+    let msg1;
+   if(marks>90){
+    msg1=' your garde is A+'
+   }else if(marks>80){
+     msg1='your score is A'
+   }else if(marks>65){
+     msg1='your score is B'
+   }else{
+    console.log('fail')
+   }*/
+
+
+// let marks=92;
+// let msg;
+// switch(true){
+//     case marks>90:
+//         msg='your score is A+';
+//         break;
+//     case marks>80:
+//         msg='your score is A';
+//         break;
+//     case marks>65:
+//         msg='your score is B';
+//         break;
+//     default:
+//         msg='you failed'
+// }
+// console.log(msg)
+
+function score(marks){
+    let msg;
+    switch(true){
+        case (marks>=90):
+            msg='your score is A+'
+            break;
+        case (marks>=76):
+            msg='your score is A';
+            break;
+        case (marks>65):
+            msg='your score is B';
+            break;
+        default:
+            msg='you failed'
+    }
+    return msg;
+}
+// let marks=90
+console.log(score(89))
+
+function checknum(num){
+if(num>0){
+    console.log('positive')
+}else if(num<0){
+    console.log('negative')
+}else{
+    console.log('zero')
+}
+}
+checknum(-1)
+
+//
+function eligible(age){
+    if(age>=18){
+        console.log('you can vote')
+    }else{
+        console.log('ur not eligible to vote')
+    }
+}
+eligible(18)
+
+function greet(name,callback){
+    console.log('Hello',name)
+    callback();
+}
+function saygoodbye(){
+    console.log('goodbye!')
+}
+greet('shakku',saygoodbye)
+
+//the process of calling the oter function within the inner function is a clouser
+function outerfunc(){
+    let outer='iam outer';
+    function innerfunc(){
+        console.log(outer)
+    }
+    return innerfunc;
+}
+const output= outerfunc();
+output();
+
+function multipler(num1){
+    return function(num2){
+        return num1*num2;
+    };
+}
+const ele=multipler(9)
+console.log(ele(2))
+
+//iife
+/*(function() {
+    console.log('This is an IIFE');
+})();
+let result = (function() {
+    let x = 10;
+    let y = 20;
+    return x + y;
+})();
+console.log(result);*/
+
+///Write a JavaScript function that accepts an argument and returns the type.
+//Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
+function type(argument){
+    return typeof argument;
+}
+console.log(type(123))
+console.log(type(true))
+console.log(type('hello'))
+console.log(type())
+console.log(type(null))
+console.log(type(function(){}))
+
+//number of vowels in satring
+function count_vowels(str){
+    const vowels='aeiouAEIOU';
+    let word=0;
+    for(let i=0;i<str.length;i++){
+        if(vowels.indexOf(str[i])!==-1){
+            word += 1;
+        }
+    }
+    return word;
+}
+console.log(count_vowels('gduyrkmsgafmb'))
+
+//words first letter will be capital
+function firstLetter(str){
+    let ele=str.split(' ');
+    let element=[];
+    for(let i=0;i<ele.length;i++){
+        element.push(ele[i].charAt(0).toUpperCase()+ele[i].slice(1))
+    }
+    return element;
+}
+let re='hii every';
+console.log(firstLetter(re))
+
+//string arranging in alphabetical order
+function alpha(str){
+    return str.split('').sort().join('');
+}
+console.log(alpha('good'))
+
+//generate the combinations
+function generateComb(str){
+    let arr=[];
+    for(let i=0;i<str.length;i++){
+        for(let j=i+1;j<=str.length;j++){
+            arr.push(str.slice(i,j))
+        }
+    }
+    return arr;
+}
+console.log(generateComb('dog'))
+
+//number reverse
+function reverseNum(num){
+    num =num+'';
+    return num.split('').reverse().join('')
+}
+console.log(reverseNum(11234))
+
+//reverse a string
+function reversestr(str){
+    return str.split('').reverse().join('')
+}
+console.log(reversestr('wejgh'))
+
+//longest word
+function longestWord(str){
+    let string=str.split(' ');
+    let anotherstr='';
+    for(let word of string){
+        if(word.length>anotherstr.length){
+            anotherstr=word;
+        }
+    }
+    return anotherstr;
+}
+console.log(longestWord('hii bye good '))
+
+//prime
+function prime(num){
+    if(num===1){
+        return false;
+    }else if(num===2){
+        return true;
+    }else{
+        for(let i=0;i<num;i++){
+            if(num%i==0){
+                return false
+            }
+        }
+        return true
+    }
+}
+console.log(prime(8))
+//checking primitive DT
+function check(item){
+    return typeof item
+}
+console.log(check(123))//number
+console.log(check('good'))
+
+//finding the second lowest and greatest numbers
+function finding(num){
+    num.sort((a,b)=>a-b)
+    let secondlowest=num[1];
+    let secondgreatest=num[num.length-2]
+    return[secondgreatest,secondlowest]
+}
+console.log(finding([1,2,4,5]))
+
+//checking the perfect number
+function perfectNum(num){
+    if(num<=1){
+        return 'its not a perfect number'
+    }
+    let sum=0;
+    for(let i=0;i<num;i++){
+        if(num%i==0){
+            sum +=i;
+        }
+    }
+    return sum==num;
+}
+console.log(perfectNum('28'))
+
+//factors of positive integer 
+function factors(int){
+    let fact=[];
+    for(let i=0;i<int;i++){
+        if(int%i==0){
+            fact.push(i)
+        }
+    }
+    return fact;
+}
+console.log(factors(8))
+
+//fizz buzz challenge
+for(let i=1;i<=100;i++){
+    if(i%3==0)console.log('fizz')
+   else if(i%5==0)console.log('buzz')
+else if(i%15==0) console.log('fizzbuzz')
+else console.log(i)
+
+}
+
+//remove Duplicates from an array or strings
+function removeDupli(arr){
+    return (new Set(arr))
+}
+console.log(removeDupli([1,2,3,2]))
+
+//string
+function removeDupli(str){
+    return (new Set(str))
+}
+console.log(removeDupli('helloo'))
+
+//make a duplicate of a given array or string
+function duplicate(arr){
+    return arr.concat(arr)
+}
+console.log(duplicate([1,2,3,4]))
+
+function duplicate(str){
+    return str.concat(str)
+}
+console.log(duplicate('hii'))
+//how check integer
+function check(int){
+    if(int%1===0){
+        return true
+    }else{
+        return false
+    }
+}
+console.log(check(12.3))
+</script>
+
+</html>

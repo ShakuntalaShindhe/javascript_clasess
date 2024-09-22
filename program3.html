@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    #counter-appication{
+        background-color: aqua;
+        width: 500px;
+        height: 200px;
+    }
+    p{
+        font-size: 2rem;
+        /* text-align: center; */
+    }
+    button{
+        background-color: rgb(58, 8, 104);
+        padding: 10px;
+        margin: 10px ;
+        margin-left: 40px;
+        /* align-items: center; */
+        cursor: pointer;
+        border-radius: 10%;
+        border: none;
+        color: whitesmoke;
+    } 
+    
+   /* .Calculator {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        width: 500px;
+        height: 300px;
+        background-color: aquamarine;
+    }
+
+    input[type="text"] {
+        width: 470px;
+        padding: 15px;
+        font-size: 20px;
+        border: 2px solid  blue;
+        }
+
+    input[type='button'] {
+        padding: 7px;
+        margin: 10px;
+        border-radius: 5%;
+        cursor: pointer;
+        border: none;
+    }*/
+</style>
+
+<body>
+    <div id="counter-appication">
+        <p id="para">0</p>
+        <button id="increment">Increment</button>
+        <button id="decrement">Decrement</button>
+        <button id="reset">Reset</button>
+    </div>
+<!-- 
+    <input type="text" id="result" />
+    <div class="Calculator">
+        <input type="button" value="1" onclick="displayResult('1')" />
+        <input type="button" value="2" onclick="displayResult('2')" />
+        <input type="button" value="3" onclick="displayResult('3')" />
+        <input type="button" value="+" onclick="displayResult('+')" />
+        <input type="button" value="4" onclick="displayResult('4')" />
+        <input type="button" value="5" onclick="displayResult('5')" />
+        <input type="button" value="6" onclick="displayResult('6')" />
+        <input type="button" value="-" onclick="displayResult('-')" />
+        <input type="button" value="7" onclick="displayResult('7')" />
+        <input type="button" value="8" onclick="displayResult('8')" />
+        <input type="button" value="9" onclick="displayResult('9')" />
+        <input type="button" value="*" onclick="displayResult('*')" />
+        <input type="button" value="0" onclick="displayResult('0')" />
+        <input type="button" value="C" onclick="clearCal()" />
+        <input type="button" value="=" onclick="equalRes()" />
+    </div> -->
+
+</body>
+<script>
+    let count=0
+    let element=document.getElementById('para')
+    document.getElementById('increment').addEventListener('click',()=>{
+        count++;
+        element.textContent=count
+    })
+    document.getElementById('decrement').addEventListener('click',()=>{
+          count--;
+          element.textContent=count
+    })
+    document.getElementById('reset').addEventListener('click',()=>{
+          count=0;
+          element.textContent=count
+    })
+
+    //Calculator
+    /*function displayResult(val) {
+        document.getElementById('result').value += val
+    }
+    function clearCal() {
+        document.getElementById('result').value = ' ';
+    }
+    function equalRes() {
+        const expression = document.getElementById('result').value
+        const cal_result = eval(expression)
+        document.getElementById('result').value = cal_result
+    }*/
+</script>
+
+</html>

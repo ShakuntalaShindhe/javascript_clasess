@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Arrow Function</h3>
+    <p>Arrow function is a consice way of writing the function </p>
+    <p>An Anonymous function in Javascript is a function without a name.It is often used
+        in situations where a function is needed temporarily,such as passing a function
+        as an agrument to another function</p>
+
+        <p>In Javascript,variables can have either global or local scope.<br>
+        Global scope means the variable is accesible throughout the entire program,<br>
+        local scope means the variable is only accesible within a spcecific block or function</p>
+       <p>A closure is the combination of a function bundled together (enclosed) with
+        refrerence to its surronding state(the lexical environment).In other words.
+        a closure gives you access to an outer function's scope from an inner function
+       </p>
+
+       <p>In Javascript,a pure function is a function that,given the same input,
+        will always return the same output and has no side effects.(does not modify the state)
+       </p>
+
+    </body>
+<script>
+    //Arrow Function:arrow function is the consice way writing a function
+    const greet=()=>console.log('Hello World')
+    greet()
+
+    //arrow function with parameters
+    const operators=(x,y,z)=>console.log(x+y+z)
+    operators(2,3,4)
+
+    const add=(a,b)=>{
+        return (a+b)}
+        // console.log('Addition of numbers',add(2,3))
+        console.log(`Addition of two numbers ${add(2,3)}`)
+
+        const sqaure=(num)=>{
+            return num*num
+        }
+        console.log(`sqare of number ${sqaure(2)}`)
+
+        const sqroot=(number)=>{
+            return Math.sqrt(number)
+        }
+        console.log(`Squre root ${sqroot(9)}`)
+
+        //arrow function with default parameters
+
+        const greetName=(name='john')=>console.log(`Good morning ${name}`)
+        // greetName()
+        greetName('Sam')
+
+
+        //Area for rectangle
+        const area=(Height,width=2)=>{
+            return Height*width;
+        }
+        console.log(`Area of rectangle ${area(2,3)}`)
+        console.log(`Area of rectangle ${area(2)}`)
+
+        //Anonymous function:A function is declared without a name
+       var addition=function (a,b){
+        return a+b
+        }
+        console.log(`Addition of numbers ${addition(2,3)}`)
+       
+
+       let subs=function(){
+        console.log(`Substraction of two numbers ${2,3}`)
+       }
+       subs()
+
+       //global and Local Scope
+         //Global scope:Varible is accesible thoughout the entire program
+         /*var global='this is global variable';
+         function scope(){
+            console.log(global)
+         }
+         scope()*/
+
+         //Local Scope:Variable is accessible within a specific block or functions
+        /* let local=function scopelocal(){
+            console.log(local)
+         }
+         scopelocal()*/
+
+         //Closure example
+          
+         function outerFunction(){
+            var outer='The Outer variable';
+            function innerFunction(){
+                console.log(`${outer}`)
+            }
+            return innerFunction()
+         }
+         let Example=outerFunction();
+         console.log(`${Example}`)
+
+         //2.
+         function counter(){
+            var count=0;
+            function increment(){
+                count++;
+                console.log(`Counter is ${count}`)
+            }
+            return increment()
+         }
+         let exa=counter()
+         //exa()
+         console.log(`${exa}`)  
+         
+         //Pure Function
+         //1.
+         function pureFunction(){
+             return "Pure Function"
+         }
+         const result1=pureFunction()
+         const result2=pureFunction()
+         console.log('Pure function',result1,result2)
+
+         //2.
+         function pure(a,b){
+            return a+b;
+         }
+         let ans1=pure(2,4)
+         let ans2=pure(2,4)
+         console.log(' ',ans1,ans2)
+
+         //Callstack
+         function first(){
+            return 'first'
+         }
+         function second(){
+            return first()+'second'
+         }
+        second()
+</script>
+</html>

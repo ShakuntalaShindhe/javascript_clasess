@@ -120,19 +120,25 @@ for(let colors of color){
 }
 
 //Nested Loop
-for(let a=0;a<=3;a++){
+
+/*for(let a=0;a<=3;a++){
   console.log('Outer Loop'+a)
   for(let b=0;b<=2;b++){
     console.log('Inner Loop'+b)
   }
-}
+}*/
 
-// for(let c=2;c<=2;c++){
-//   console.log('Outer loop'+c)
-//   while(d<2){
-//     console.log('Number'+d)
-//   }
-// }
+//nested using for and while loops
+ let d=0;
+for(let c=1;c<=4;c++){
+  console.log('Outer loop'+c)
+  
+  while(d<3){
+    console.log('Number'+d)
+    break
+  }
+  d++
+}
 
 </script>
 </html>

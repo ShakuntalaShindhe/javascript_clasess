@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>Simple Calculator</h4>
+</body>
+<script>
+    function performOperation(num1, num2, operation) {
+        if (operation == '+') {
+            return num1 + num2;
+        } else if (operation == '-') {
+            return num1 - num2;
+        } else if (operation == '*') {
+            return num1 * num2;
+        } else if (operation == '/') {
+            if (num2 !== 0) {
+                return num1 / num2;
+            } else {
+                return 'Cannot divide a number by zero';
+            }
+        } else {
+            return 'operator not exist';
+        }
+    }
+    let History = [];
+        function displayHistory() {
+        console.log("History:");
+        History.forEach((a, index) =>{
+            console.log(`${index + 1}: ${a}`);
+        });
+    }
+    while (true) {
+
+        let num1 = parseInt(prompt("Enter first number:"));
+        console.log('first number:', num1)
+        let num2 = parseInt(prompt("Enter second number:"));
+        console.log('second number:', num2)
+        let operation = prompt("Enter operator (+, -, *, /):");
+        console.log('operator:', operation)
+        let result = performOperation(num1, num2, operation);
+        console.log(`Result:${num1} ${operation} ${num2} = ${result}`);
+
+        History.push(`${num1} ${operation} ${num2} = ${result}`);
+        displayHistory();
+        let ContinueCal = prompt(" do u want to perform another calculation?");
+        if (ContinueCal !== 'yes') {
+            console.log("user decided to exit.");
+            break;
+        }
+    }
+
+
+
+
+
+
+
+
+</script>
+
+</html>

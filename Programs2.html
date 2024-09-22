@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+//1.Write a javascript program that takes an array of string as input and returns a new
+//array with strings sorted in alphabetical order.
+      /*  function sortArray(arr){
+            return arr.sort()
+        }
+        console.log(sortArray(['s','e','a','z']))
+        //2.
+        function arra(num){
+            return num.sort((a,b)=>b-a)
+        }
+        console.log(arra([1,9,6,7,2]))
+*/
+//2.Write a Javascript program that accepts a string as input and returns the same string
+//with the first letter capitalized.
+       /* function capital(str){
+            return str.charAt(0).toUpperCase()+str.slice(1)
+        }
+        console.log(capital('hello'))*/
+
+        function capital(str){
+            let lastUpper=str[str.length - 1].toUpperCase();
+            return str.slice(0, -1) + lastUpper
+        }
+        console.log(capital('welcome'))
+        str
+
+//3.Write a Javacsript program that prompts the user to enter two strings and checks if they
+//are anagrams of each other.
+        function anagram(str1,str2){
+            const str1_sort=str1.toLowerCase().split('').sort().join('')
+            const str2_sort=str2.toLowerCase().split('').sort().join('')
+            return str1_sort===str2_sort
+        }
+        console.log(anagram('silent','listen'))
+
+//4.Write a Javascript program to reverse a given string.
+        // function reverseStr(str){
+        //     return str.split('').reverse().join('')
+        // }
+        // console.log(reverseStr('hello'))
+
+
+    /*function blank(str){
+    // return(!str||str.trim().length()==0)
+    if(str===null || str===undefined || str.trim().length===0){
+        return true;
+    }else{
+        return false;
+    }
+    }
+    console.log(blank(''))num_result.concat(num_result)
+    console.log(blank())
+    console.log(blank('ahh'))*/
+
+    /*let number=[1,2,3,4,5,6,7]
+    let num_result=number.filter(num=>num%3==0)
+    console.log(num_result)
+    let double=num_result.map(num=>[num,num]).flat()
+    console.log(double)*/
+
+    //Write a JS function to check wheather a string is blank or not.
+    function str_blank(input){
+        if(input.length==0){
+            return false
+        }else{
+            return true
+        }
+    }
+    console.log(str_blank(''))
+    console.log(str_blank('hello'))
+
+    //filtering and mapping odd numbers and double the element
+    let numbers=[1,2,3,4,5,6,7,8]
+    let result=numbers.filter(num=>num%2!=0)
+                    .map(sqaure=>sqaure*2)
+    console.log(result)
+
+    //filtering and mapping products with a certain price and name
+    let products=[{id:1,name:'Laptop',price:800},{id:2,name:'Tab',price:700},{id:3,name:'MobilePhone',price:500}]
+    let product_result=products.filter(product=>product.price>500)
+                               .map(product=>({name:product.name,price:product.price}))
+    console.log(product_result)
+
+</script>
+</html>
